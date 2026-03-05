@@ -1,0 +1,338 @@
+/* -------------------------------
+   Basic Reset and Fonts
+--------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f1624, #1a1f35);
+  color: #fff;
+  scroll-behavior: smooth;
+  font-size: 18px; /* 🔹 Increased base font */
+}
+
+/* -------------------------------
+   Header
+--------------------------------- */
+header {
+  background: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  padding: 20px 0; /* a bit more padding */
+  backdrop-filter: blur(8px);
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8em; /* bigger */
+  color: #00b4d8;
+  font-weight: 700;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 500;
+  font-size: 1.05em; /* slightly larger links */
+  transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #00b4d8;
+}
+
+/* -------------------------------
+   Hero Section
+--------------------------------- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  width: 90%;
+  margin: auto;
+  padding-top: 100px;
+}
+
+.hero-content {
+  width: 50%;
+}
+
+.hero-content h2 {
+  font-size: 2.2em;
+}
+
+.hero-content h2 span {
+  color: #00b4d8;
+}
+
+.hero-content h3 {
+  font-size: 3em;
+  color: #00b4d8;
+  margin: 10px 0;
+}
+
+.hero-content p {
+  color: #bbb;
+  margin-bottom: 25px;
+  line-height: 1.7;
+  font-size: 1.05em;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  border: none;
+  padding: 14px 25px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.05em;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.btn.primary {
+  background: #00b4d8;
+  color: black;
+}
+
+.btn.secondary{
+  background:white !important;
+  color:black !important;
+}
+
+
+.btn:hover {
+  transform: scale(1.07);
+}
+
+.hero-image {
+  width: 40%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #00b4d8;
+  box-shadow: 0 0 40px #00b4d8;
+}
+
+/* -------------------------------
+   Social Links
+--------------------------------- */
+.social-links {
+  margin-top: 25px;
+}
+
+.social-links a {
+  color: #00b4d8;
+  margin-right: 15px;
+  font-size: 1.5em; /* larger icons */
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #fff;
+}
+
+/* -------------------------------
+   Skills Section
+--------------------------------- */
+.skills {
+  padding: 110px 0;
+  text-align: center;
+  background: #0b1220;
+}
+
+.skills h2 {
+  font-size: 2.2em;
+  color: #00b4d8;
+  margin-bottom: 45px;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.skill img {
+  width: 90px;
+  height: 90px;
+}
+
+.skill p {
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+/* -------------------------------
+   Projects Section
+--------------------------------- */
+
+.github-section{
+  text-align:center;
+  padding:80px 0;
+}
+
+/* button */
+.github-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:10px 20px;
+  background:#24292e;
+  color:white;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:600;
+  font-size:14px;
+}
+
+/* github logo size */
+.github-btn img{
+  width:20px;
+  height:20px;
+}
+
+/* hover */
+.github-btn:hover{
+  background:#000;
+}
+/* -------------------------------
+   Certificate Section
+--------------------------------- */
+.certificate {
+  padding: 110px 0;
+  text-align: center;
+  background: #0b1220;
+}
+
+.certificate h2 {
+  color: #00b4d8;
+  font-size: 2.2em;
+  margin-bottom: 50px;
+}
+
+/* GRID LAYOUT */
+.certificate-content{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  width: 80%;
+  margin: auto;
+}
+
+/* CARD */
+.certificate-card{
+  background: #111a2e;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.certificate-card img{
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #00b4d8;
+  margin-bottom: 15px;
+}
+
+/* -------------------------------
+   Contact Section
+--------------------------------- */
+.contact{
+  padding:100px 0;
+  text-align:center;
+  background:#0b1220;
+}
+
+.contact h2{
+  color:#00b4d8;
+  font-size:2.3rem;
+  margin-bottom:40px;
+}
+
+.social-container{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+.social-btn{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 25px;
+  background:#111a2e;
+  color:white;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.social-btn img{
+  width:24px;
+}
+
+.social-btn:hover{
+  background:#00b4d8;
+  transform:scale(1.1);
+}
+
+/* -------------------------------
+   Responsive Design
+--------------------------------- */
+@media (max-width: 900px) {
+  body {
+    font-size: 16px;
+  }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+  }
+  .hero-content, .hero-image {
+    width: 100%;
+  }
+  .hero-image img {
+    width: 230px;
+    height: 230px;
+  }
+}
